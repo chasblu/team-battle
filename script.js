@@ -7,12 +7,13 @@
 // the character that has been selected is removed from the options.
 // Next it is the computers turn to select.  The computer picks randomly from the remaining options. 
 // The computer selection is removed from the character list and is placed on the computers stage.
-// Once both teams are done being selected all the character selction images are removed from the screen.
+// Once both teams are done being selected all the character selection images are removed from the screen.
 // the game moves into the battle stage
+// Each character only attacks once per turn
 // The player chooses its attack first.  The player clicks on the computers character image to attack. 
 // The player does this for each character he has on his stage.
-// the computer chooses randomly who it attacks and the the fight scene plays out(for MVP just dialogue)
-// The damage dealt/health lost is equal to the attack power of the character(will convert this to an attack power range if time allows)
+// the computer chooses randomly who it attacks for each character on the computer stage and the the fight scene plays out(for MVP just dialogue)
+// The damage dealt/health lost, is equal to the attack power of the character(will convert this to an attack power range if time allows)
 // when a characters health reaches 0 it is eliminated and cannot attack anymore
 // eliminated character images are removed from the stages when they are eliminated
 // Once an entire team is eliminated it loses.  Screen reads who won.
@@ -24,25 +25,63 @@ COMP_TEAM_LENGTH = 1
 
 // helper function
 // const randomNumber = () => 
-
+// 
 class Character {
     constructor(name, health, attackPower, accuracy)
     this.name = name
     this.health = health,
-    this.attackPower = attackPower
-    this.accuracy = 
+    this.attackPower = attackPower,
+    this.accuracy = accuracy,
+    attack(target) {
+        if (Math.random() < target.accuracy) {
+            let newTargetHealth = target.health - goku.attackPower;
+            console.log(newTargetHealth);
+        }else {
+            console.log('missed');
+            
+    
+        }
+    }
+}
+    
 
+
+const superman = new Character ("Superman", 100, 10, .7) {
+    attack: function (target) {
+        if (Math.random() < margaret.accuracy) {
+            let newTargetHealth = target.health - superman.attackPower;
+            console.log(newTargetHealth);
+            
+        }else {
+            console.log('missed');
+        }
 }
 
-const superman = new Character ("Superman", 100, 10)
+
+
+const goku = new Character('Goku', 100, 15, .7){
+    attack(target) {
+    if (Math.random() < target.accuracy) {
+        let newTargetHealth = target.health - goku.attackPower;
+        console.log(newTargetHealth);
+    }else {
+        console.log('missed');
+        
+
+    }
 }
 
-const goku = new Character('Goku', 100, 15)
 
 
-// const playGame = () => {
-//     while
-// }
+const gokuCharacter = document.querySelector('.character-1')
+
+
+
+
+const playGame = () => {
+    while (PLAYER_TEAM_LENGTH > 0 && COMP_TEAM_LENGTH > 0) 
+
+}
 
 
 
