@@ -19,57 +19,51 @@
 // Once an entire team is eliminated it loses.  Screen reads who won.
 // button to reset the board
 
+// DOM VARIABLES
+const resultsDisplay = document.querySelector('.results')
+
+const attackbtn = document.querySelector('.attack')
+
 // GLOBAL VARIABLE
-PLAYER_TEAM_LENGTH = 1
-COMP_TEAM_LENGTH = 1
 
 // helper function
-// const randomNumber = () => 
-// 
+
+
+// event listener
+attackbtn.addEventListener('click', () => {
+    goku.attack(superman);
+    if (superman.health > 0) {
+        superman.attack(goku)
+    }else { resultsDisplay.innerHTML  
+
+    }
+})
+
 class Character {
-    constructor(name, health, attackPower, accuracy)
-    this.name = name
-    this.health = health,
-    this.attackPower = attackPower,
-    this.accuracy = accuracy,
-    attack(target) {
-        if (Math.random() < target.accuracy) {
-            let newTargetHealth = target.health - goku.attackPower;
-            console.log(newTargetHealth);
-        }else {
-            console.log('missed');
-            
-    
-        }
+    constructor(name, health, attackPower, accuracy) {
+    this.name = name;
+    this.health = health;
+    this.attackPower = attackPower;
+    this.accuracy = accuracy;
     }
-}
-    
-
-
-const superman = new Character ("Superman", 100, 10, .7) {
-    attack: function (target) {
-        if (Math.random() < margaret.accuracy) {
-            let newTargetHealth = target.health - superman.attackPower;
-            console.log(newTargetHealth);
-            
-        }else {
-            console.log('missed');
-        }
-}
-
-
-
-const goku = new Character('Goku', 100, 15, .7){
     attack(target) {
-    if (Math.random() < target.accuracy) {
-        let newTargetHealth = target.health - goku.attackPower;
-        console.log(newTargetHealth);
+    if (Math.random() < this.accuracy) {
+        target.health -= this.attackPower;
+        resultsDisplay.innerHTML += `<h3> ${target.name} was hit! Health is down to ${target.health}!</h3>`;
     }else {
-        console.log('missed');
+        resultsDisplay.innerHTML += `<h3> ${this.name} Missed!</h3>`
         
-
+        }
     }
 }
+    
+
+
+const superman = new Character ("Superman", 100, 10, .7)
+
+
+
+const goku = new Character('Goku', 100, 15, .7)
 
 
 
@@ -78,10 +72,6 @@ const gokuCharacter = document.querySelector('.character-1')
 
 
 
-const playGame = () => {
-    while (PLAYER_TEAM_LENGTH > 0 && COMP_TEAM_LENGTH > 0) 
-
-}
 
 
 
