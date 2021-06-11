@@ -28,3 +28,10 @@ h1 {
 .results {
     color: whitesmoke;
 }
+
+@media (max-width: 1275px) {
+    body {
+        background-image: none;
+        background-color: black;
+    }
+}
