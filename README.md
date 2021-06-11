@@ -16,3 +16,7 @@ Goku and Superman are pit against each other in an intense battle.  Click the at
 - At first I wanted the project to be a team battle game where you and the computer select your team in a draft format and then battle it out.
 - I realized that when building a game its important to stay focused on one thing at a time in order not to get overwhelmed 
 - Write ideas down and file them away you can always go back to them
+
+###unsolved Problems
+- Making it so that the user and computer select a team of 3 to battle each other
+- Making different attack for the characters that do different damage and use different amounts of energy so that there is a strategy involved
