@@ -25,6 +25,11 @@ h1 {
     color: rgb(227, 58, 69);
 }
 
+.reset {
+    background-color: midnightblue;
+    color: rgb(227, 58, 69);
+}
+
 .results {
     color: whitesmoke;
 }
