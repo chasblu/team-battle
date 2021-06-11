@@ -19,3 +19,12 @@ h1 {
     height: auto;
     width: 50%;
 }
+
+.attack {
+    background-color: midnightblue;
+    color: rgb(148, 36, 44);
+}
+
+.results {
+    color: whitesmoke;
+}
