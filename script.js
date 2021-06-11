@@ -24,7 +24,6 @@ const resultsDisplay = document.querySelector('.results')
 
 const attackBtn = document.querySelector('.attack')
 
-// GLOBAL VARIABLE
 
 // helper function
 const resetGame = () => {
@@ -32,12 +31,12 @@ const resetGame = () => {
 }
 const winState = () => {
     if (superman.health < 0) {
-        document.body.innerHTML = `<h1>Game Over!${goku.name} Wins! Congrats you beat the Computer</h1>
+        document.body.innerHTML = `<h1>Game Over! ${goku.name} Wins! Congrats you beat the Computer</h1>
         <button class="reset">Play Again!</button>`
         const resetBtn = document.querySelector('.reset')
         resetBtn.addEventListener('click', resetGame)
     } else if (goku.health < 0) {
-        document.body.innerHTML = `<h1>Game Over!${superman.name} Wins! Sorry you have lost</h1>
+        document.body.innerHTML = `<h1>Game Over! ${superman.name} Wins! Sorry you have lost</h1>
         <button class="reset">Play Again!</button>`
         const resetBtn = document.querySelector('.reset')
         resetBtn.addEventListener('click', resetGame)
@@ -57,7 +56,7 @@ attackBtn.addEventListener('click', () => {
 }
 });
 
-
+// Character Class
 class Character {
     constructor(name, health, attackPower, accuracy) {
     this.name = name;
@@ -77,7 +76,7 @@ class Character {
 }
     
 
-
+// Character Instances
 const superman = new Character ("Superman", 100, 15, .7)
 
 

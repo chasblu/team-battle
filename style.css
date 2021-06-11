@@ -1,4 +1,20 @@
-img {
+body {
+    background-image: url(battlefield-background.jpeg);
+    background-size: cover;
+    color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-container {
+   display: flex; 
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.character1 > img {
     height: auto;
-    width: 8%;
+    width: 50%;
 }
