@@ -20,4 +20,4 @@ Goku and Superman are pit against each other in an intense battle.  Click the at
 ###unsolved Problems
 - Making it so that the user and computer select a team of 3 to battle each other
 - Making different attack for the characters that do different damage and use different amounts of energy so that there is a strategy involved
-- Add animations for attacks and effects to the characters when they are hit to show the fight instead of dialogue
+- Add animations for attacks and effects to the characters when they are hit to show the fight 
