@@ -32,13 +32,13 @@ const resetGame = () => {
 }
 const winState = () => {
     if (superman.health < 0) {
-        document.body.innerHTML = `<h1>Game Over!${goku.name} Wins!</h1>
-        <button class="reset">Reset</button>`
+        document.body.innerHTML = `<h1>Game Over!${goku.name} Wins! Congrats you beat the Computer</h1>
+        <button class="reset">Play Again!</button>`
         const resetBtn = document.querySelector('.reset')
         resetBtn.addEventListener('click', resetGame)
     } else if (goku.health < 0) {
-        document.body.innerHTML = `<h1>Game Over!${superman.name} Wins!</h1>
-        <button class="reset">Reset</button>`
+        document.body.innerHTML = `<h1>Game Over!${superman.name} Wins! Sorry you have lost</h1>
+        <button class="reset">Play Again!</button>`
         const resetBtn = document.querySelector('.reset')
         resetBtn.addEventListener('click', resetGame)
     }
